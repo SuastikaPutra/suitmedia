@@ -1,0 +1,70 @@
+/* Custom CSS */
+@layer utilities {
+  .clip-path-triangle {
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 70%);
+  }
+}
+.parallax {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+li a {
+    color: white;
+}
+
+.header-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-visible {
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .banner-container {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+  }
+
+  .banner-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: white;
+    text-align: center;
+  }
+
+  .banner-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .banner-text p {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }

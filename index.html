@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suitmedia</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="navbar" class="navbar fixed top-0 left-0 w-full max-h-16 flex justify-between p-5 items-center z-50 bg-orange-500 header-solid">
+        <div class="logo flex items-center">
+            <img src="assets/logo.png" alt="" class="logo-img w-10">
+        </div>
+        <div class="menu-items flex items-center">
+            <ul class="flex gap-x-8">
+              <li><a href="#" class="menu-link border-b-4 border-transparent" data-page="works">Works</a></li>
+              <li><a href="#" class="menu-link border-b-4 border-transparent" data-page="about">About</a></li>
+              <li><a href="#" class="menu-link border-b-4 border-transparent" data-page="services">Services</a></li>
+              <li><a href="#" class="menu-link border-b-4 border-transparent" data-page="ideas">Ideas</a></li>
+              <li><a href="#" class="menu-link border-b-4 border-transparent" data-page="career">Career</a></li>
+              <li><a href="#" class="menu-link border-b-4 border-transparent" data-page="contact">Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="banner-container">
+      <img
+        src="assets/bg.jpg"
+        alt="Banner Image"
+        class="banner-image"
+        id="bannerImage"
+      />
+      <div class="banner-overlay"></div>
+      <div class="banner-text">
+        <h1>Ideas</h1>
+        <p>Where all our great things begin</p>
+      </div>
+    </div>
+    <div class="container p-5">
+      
+      <div class="content"></div>
+
+      <!-- Sort and Pagination -->
+      <div class="flex justify-between items-center mb-6">
+        <div id="showing"></div>
+        <p></p>
+        <div class="flex">
+        <div class="me-5">
+          <label for="perPage" class="mr-4">Show per page:</label>
+          <select id="perPage" class="border rounded p-2">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+          </select>
+        </div>
+        <div class="me-5">
+          <label for="sort" class="mr-4">Sort by:</label>
+          <select id="sort" class="border rounded p-2">
+            <option value="-published_at">Newest</option>
+            <option value="published_at">Oldest</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+      <div
+        id="postList"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+      >
+      </div>
+
+      <div id="pagination" class="flex justify-center mt-6"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
